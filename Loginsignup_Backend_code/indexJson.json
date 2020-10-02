@@ -1,0 +1,114 @@
+[
+    {
+        "firstName": "ramesh",
+        "lastName": "inumula",
+        "password": "siri.7788",
+        "email": "inumularamesh@gmail.com",
+        "Gender": "male",
+        "DateofBirth": "01-02199"
+    },
+    {
+        "firstName": "Bhaskar",
+        "lastName": "bhadivenkatagalla",
+        "email": "bhadivenkatagalla@gmail.com",
+        "password": "Bhaskar.7788",
+        "Gender": "male",
+        "DateofBirth": "01-02-1997"
+    },
+    {
+        "firstName": "jai",
+        "lastName": "simhadri",
+        "email": "prakash@gmail.com",
+        "password": "ram.1234567",
+        "Gender": "male",
+        "DateofBirth": "01-02199"
+    },
+    {
+        "firstName": "sirisha",
+        "lastName": "inumula",
+        "email": "siriram143@gmail.com",
+        "password": "siriram143",
+        "Gender": "Female",
+        "DateofBirth": "01021999"
+    },
+    {
+        "firstName": "tataji",
+        "lastName": "sarakar",
+        "email": "tataji@gmail.com",
+        "password": "tattaji.123456789",
+        "Gender": "Male",
+        "DateofBirth": "01021999"
+    },
+    {
+        "firstName": "BhaskarRock",
+        "lastName": "bhadivenkatagalla",
+        "email": "BhaskarRock@gmail.com",
+        "password": "BhaskarRock.7788",
+        "Gender": "male",
+        "DateofBirth": "01-02-1997"
+    },
+    {
+        "firstName": "Bhaskar",
+        "lastName": "bhadivenkatagalla",
+        "email": "bhadivenkatagalla@gmail.com",
+        "password": "Bhaskar.7788",
+        "Gender": "male",
+        "DateofBirth": "01-02-1997"
+    },
+    {
+        "firstName": "BhaskaRockr",
+        "lastName": "bhadivenkatagalla",
+        "email": "BhaskaRockr@gmail.com",
+        "password": "BhaskaRockr.7788",
+        "Gender": "male",
+        "DateofBirth": "01-02-1997"
+    },
+    {
+        "firstName": "tataji",
+        "lastName": "sarakar",
+        "email": "tataji@gmail.com",
+        "password": "tattaji.123456789",
+        "Gender": "Male",
+        "DateofBirth": "01021999"
+    },
+    {
+        "firstName": "tataji",
+        "lastName": "sarakar",
+        "email": "tataji@gmail.com",
+        "password": "tattaji.123456789",
+        "Gender": "Male",
+        "DateofBirth": "01021999"
+    },
+    {
+        "firstName": "lucky",
+        "lastName": "Inumula",
+        "email": "luckyramesh@gmail.com",
+        "password": "lucky.7788",
+        "Gender": "female",
+        "DateofBirth": "01-02-2000"
+    },
+    {
+        "firstName": "suresh",
+        "lastName": "Inumula",
+        "email": "sureshprasad@gmail.com",
+        "password": "suresh.7788",
+        "Gender": "male",
+        "DateofBirth": "01-02-2002"
+    },
+    {
+        "firstName": "hello",
+        "lastName": "inumula",
+        "email": "hello.yes@gmail.com",
+        "password": "hello.7788",
+        "Gender": "Male",
+        "DateofBirth": "0102199"
+    },
+    {
+        "firstName": "hello",
+        "lastName": "inumula",
+        "email": "helloyes@gmail.com",
+        "password": "hello.7788",
+        "Gender": "Male",
+        "DateofBirth": "01021999"
+    }
+]
