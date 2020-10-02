@@ -31,22 +31,13 @@ export default class LoginPage extends Component {
             massegeErrorforpassword:"",
             createAccountButton:false,
             isDialogueOpen:false,   
-            loginData:[],
+            loginmsg:'',
             loginErrorMassage:'',
             isloginMsgshow:false
 
         }
     }
-    componentDidMount(){
-        axios.get("http://localhost:5000/all/employees/get")
-        .then(responce=>{
-            // console.log(responce,"getting data")
-            this.setState({loginData:responce.data})
-            console.log(this.state.loginData,"state dayaaaaaaaaaaaaa");
-    
-        })
-
-    }
+  
     setEmailhandler = (e)=>{
         
             if(e.target.value.length<=0){
@@ -107,33 +98,23 @@ export default class LoginPage extends Component {
         }
         return true
     }
-    checkingLoginDetails = ()=>{
-        const {emailPhone,passWord,loginData} = this.state
-        // console.log("checking listttttttttt click");
-        const empytList = []
-        loginData.map(each=> 
-            <div>
-                { (each.email === emailPhone) 
-                && (each.password === passWord) ?  empytList.push("true"):""}
-            </div>)
-
-            if (!empytList.includes("true")){
-                this.setState({
-                       loginErrorMassage:"please check your email or password once!!!....",
-                       isloginMsgshow:true
-                })
-                return false
-            }
-        return true
-    }
     subMitLogin = () =>{
-        // console.log("first click", this.state.emailPhone);
         if(this.Valid()){
-        // console.log("2 click",this.state.passWord);
-            if(this.checkingLoginDetails()){
-                console.log("3 click");
-                alert("login succesfully")
-                }
+            const email = this.state.emailPhone;
+            const password = this.state.passWord;
+            
+            const data = {
+                email,password
+            }
+                axios.post("http://localhost:5000/all/users/post/login",data)
+                .then(responce=>{
+                    console.log(responce,"getting data")  
+                    this.setState({loginmsg:responce.data.msg})
+                })
+                .catch(error=>{
+                    console.log(error);
+                    
+                })
             }
     }
     CloseDialogue = ()=>{
@@ -164,6 +145,7 @@ export default class LoginPage extends Component {
                 <Grid item xs={3} style={{marginTop:140}}>
                 {this.state.isloginMsgshow ? <i style={{color:"red"}}>{this.state.loginErrorMassage}</i>:''}
                     <Card className="card1" style={{borderRadius:"10px",boxShadow:"10px 10px 3px #aaaa"}}>
+                    <p style={{color:"red"}}>{this.state.loginmsg}</p>
                     <CardContent>
                     <FormControl fullWidth variant="outlined">
                     <InputLabel htmlFor="component-outlined">Email or phone number</InputLabel>

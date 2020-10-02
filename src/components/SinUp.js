@@ -45,6 +45,7 @@ export default class SinUp extends Component {
             errorMsgForbirth:'',
             signupMsgshow:false,
             validClose:false,
+            signupmsgfromBackend:'',
         }
     }
 
@@ -206,14 +207,16 @@ export default class SinUp extends Component {
                 firstName,lastName,email,password,DateofBirth,Gender
             }
 
-            axios.post("http://localhost:5000/all/employees/post",data)
+            axios.post("http://localhost:5000/all/users/post/signup",data)
                 .then(responce=>{
-                    console.log(responce,"getting data")
-                    console.log(responce,"state dayaaaaaaaaaaaaa");
+                  this.setState({
+                    signupmsgfromBackend:responce.data.msg
+                  })
                 })
-            console.log(data,"whole dataaaaaaaa");
-            alert("okayyy")
-            
+                .catch(error=>{
+                    console.log(error);
+                    
+                })            
         }
     }
     
@@ -237,6 +240,7 @@ export default class SinUp extends Component {
                     <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
                     Sign Up     
                     {this.state.signupMsgshow ? <h4><i style={{color:"red"}}>{this.state.errorMsgForbirth}</i></h4>:''}
+                    <p style={{color:"red"}}>{this.state.signupmsgfromBackend}</p>
                     </DialogTitle>
                     <DialogContent 
                         scroll="paper"
