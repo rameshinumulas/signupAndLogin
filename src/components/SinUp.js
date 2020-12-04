@@ -144,8 +144,6 @@ export default class SinUp extends Component {
 
 
 
-
-
     ValidDetails = ()=>{
         const {firstName,surName,sinupEmailPhone,sinupPassWord,Gender,DateofBirth}=this.state
         if (firstName.length<4 || surName.length<4){
@@ -194,7 +192,7 @@ export default class SinUp extends Component {
        return true 
     }
     SubmitDetails = ()=>{
-        if(this.ValidDetails()){
+        // if(this.ValidDetails()){
 
             const firstName = this.state.firstName
             const lastName = this.state.surName
@@ -209,6 +207,7 @@ export default class SinUp extends Component {
 
             axios.post("http://localhost:5000/all/users/post/signup",data)
                 .then(responce=>{
+                    console.log(responce,"uuuuu");
                   this.setState({
                     signupmsgfromBackend:responce.data.msg
                   })
@@ -217,7 +216,7 @@ export default class SinUp extends Component {
                     console.log(error);
                     
                 })            
-        }
+        // }
     }
     
     render() {

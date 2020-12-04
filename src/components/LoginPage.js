@@ -202,7 +202,6 @@ export default class LoginPage extends Component {
                 </Button>
                 </CardActions>
                 </Card>
-
                 
                 {this.state.createAccountButton ? <SinUp handleClose = {this.CloseDialogue}  OpenProps={this.state.isDialogueOpen} />:null}
 
